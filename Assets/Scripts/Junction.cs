@@ -6,10 +6,13 @@ using UnityEngine.Splines;
 
 public class Junction : MonoBehaviour
 {
-
-    [SerializeField] private List<SplineContainer> _outs;
-
-    public SplineContainer NextTrack => _outs[_nextTrackIdx];
+    [Header("Tracks")]
+    [Tooltip("Tracks and signals must be order-aligned to work together")]
+    [SerializeField] private List<SplineContainer> _tracks;
+    [SerializeField] private List<Signal> _signals;
+    [SerializeField] private Transform _mainFlag;
+    
+    public SplineContainer NextTrack => _tracks[_nextTrackIdx];
     
     private Camera _camera;
     private SplineContainer _nextTrack;
@@ -18,6 +21,7 @@ public class Junction : MonoBehaviour
     void Start()
     {
         _camera = Camera.main;
+        Signalize(_nextTrackIdx, true);
     }
 
     void Update()
@@ -32,14 +36,34 @@ public class Junction : MonoBehaviour
         Ray ray = _camera.ScreenPointToRay(mousePos);
 
         if (Physics.Raycast(ray, out RaycastHit hit))
-            OnClicked();
+        {
+            if(hit.collider.gameObject == gameObject)
+            {
+                OnClicked();    
+            }
+        }
     }
 
     private void OnClicked()
     {
+        Signalize(_nextTrackIdx, false);
         _nextTrackIdx++;
-        if (_nextTrackIdx >= _outs.Count) _nextTrackIdx = 0;
+
+        if (_nextTrackIdx >= _tracks.Count) _nextTrackIdx = 0;
+        Signalize(_nextTrackIdx, true);
+
+        Debug.Log($"{gameObject.name} clicked — Next Track ? {_tracks[_nextTrackIdx]}");
+    }
+
+    private void Signalize(int signalIdx, bool isOn)
+    {
+        if(_signals.Count == 0) return;
+        if(signalIdx >= _signals.Count) return;
         
-        Debug.Log($"{gameObject.name} clicked — Next Track ? {_outs[_nextTrackIdx]}");
+        _signals[signalIdx].IsOn = isOn;
+        if(isOn)
+        {
+            _mainFlag.LookAt(_signals[_nextTrackIdx].transform.position);
+        }
     }
 }

@@ -31,7 +31,10 @@ public class TrainLoco : MonoBehaviour
     {
         if (other.TryGetComponent(out Junction passage))
         {
-            _nextTrack = passage.NextTrack;
+            if(passage.NextTrack)
+            {
+                _nextTrack = passage.NextTrack;
+            }
         }
 
         if (other.CompareTag("TrainStopper"))
