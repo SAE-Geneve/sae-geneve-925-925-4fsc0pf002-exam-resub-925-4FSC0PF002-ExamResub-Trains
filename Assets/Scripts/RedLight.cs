@@ -14,6 +14,7 @@ public class RedLight : MonoBehaviour
     void Start()
     {
         _camera = Camera.main;
+        _animator.SetBool("IsGreen", _isGreen);
     }
 
     void Update()

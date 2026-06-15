@@ -33,8 +33,27 @@ public class TrainLoco : MonoBehaviour
         {
             _nextTrack = passage.NextTrack;
         }
+
+        if (other.CompareTag("TrainStopper"))
+        {
+            if (other.transform.parent.TryGetComponent(out RedLight redLight))
+            {
+                if (redLight.IsGreen) Brake();
+                else Ride();
+            }
+        }
     }
-    
+
+    private void Ride()
+    {
+        _splineAnim.Pause();
+    }
+
+    private void Brake()
+    {
+        _splineAnim.Play();
+    }
+
     private void OnCompletedTrack()
     {
         if(_nextTrack) _splineAnim.Container = _nextTrack;
