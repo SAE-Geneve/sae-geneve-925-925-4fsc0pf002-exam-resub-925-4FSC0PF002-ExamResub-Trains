@@ -8,9 +8,8 @@ public class RedLight : MonoBehaviour
     private Camera _camera;
     private bool _isGreen = true;
 
+    [SerializeField] private Animator _animator;
     public bool IsGreen => _isGreen;
-    public UnityEvent IsGreenEvent;
-    public UnityEvent IsRedEvent;
 
     void Start()
     {
@@ -41,13 +40,6 @@ public class RedLight : MonoBehaviour
     {
         _isGreen = !_isGreen;
         Debug.Log($"{gameObject.name} clicked — IsGreen ? {_isGreen}");
-        if (_isGreen)
-        {
-            IsGreenEvent.Invoke();
-        }
-        else
-        {
-            IsRedEvent.Invoke();
-        }
+        _animator.SetBool("IsGreen", _isGreen);
     }
 }
