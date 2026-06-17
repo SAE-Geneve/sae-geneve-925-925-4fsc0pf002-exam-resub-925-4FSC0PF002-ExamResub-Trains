@@ -119,6 +119,23 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &329387067 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6017680274083578773, guid: c6b0bbae05ec6584681fdd7270c5a05a, type: 3}
+  m_PrefabInstance: {fileID: 7649888810736695664}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &329387073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 329387067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f153cb268eb36d245914197dc5ffa168, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrainCart
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -315,7 +332,7 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 410087039}
   m_Enabled: 1
-  serializedVersion: 12
+  serializedVersion: 13
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 2
@@ -367,7 +384,7 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
-  m_ShadowRadius: 0
+  m_ShapeRadius: 0
   m_ShadowAngle: 0
   m_LightUnit: 1
   m_LuxAtDistance: 1
@@ -465,6 +482,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1073161446 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6355629255666365591, guid: c6b0bbae05ec6584681fdd7270c5a05a, type: 3}
+  m_PrefabInstance: {fileID: 7649888810736695664}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1073161452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1073161446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f153cb268eb36d245914197dc5ffa168, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrainCart
 --- !u!1001 &4944238974400703215
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -541,6 +575,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1075333139919201711, guid: c6b0bbae05ec6584681fdd7270c5a05a, type: 3}
+      propertyPath: m_Target
+      value: 
+      objectReference: {fileID: 4944238974400703216}
+    - target: {fileID: 1075333139919201711, guid: c6b0bbae05ec6584681fdd7270c5a05a, type: 3}
+      propertyPath: m_StartOffset
+      value: 0.96
+      objectReference: {fileID: 0}
     - target: {fileID: 1593080596431409238, guid: c6b0bbae05ec6584681fdd7270c5a05a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -581,6 +623,54 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1958938226655706791, guid: c6b0bbae05ec6584681fdd7270c5a05a, type: 3}
+      propertyPath: m_Target
+      value: 
+      objectReference: {fileID: 4944238974400703216}
+    - target: {fileID: 1958938226655706791, guid: c6b0bbae05ec6584681fdd7270c5a05a, type: 3}
+      propertyPath: m_StartOffset
+      value: 0.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 6014675564120682029, guid: c6b0bbae05ec6584681fdd7270c5a05a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6014675564120682029, guid: c6b0bbae05ec6584681fdd7270c5a05a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5.4543386
+      objectReference: {fileID: 0}
+    - target: {fileID: 6014675564120682029, guid: c6b0bbae05ec6584681fdd7270c5a05a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6014675564120682029, guid: c6b0bbae05ec6584681fdd7270c5a05a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6014675564120682029, guid: c6b0bbae05ec6584681fdd7270c5a05a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6014675564120682029, guid: c6b0bbae05ec6584681fdd7270c5a05a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6397584268726425903, guid: c6b0bbae05ec6584681fdd7270c5a05a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6397584268726425903, guid: c6b0bbae05ec6584681fdd7270c5a05a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.7445943
+      objectReference: {fileID: 0}
+    - target: {fileID: 6397584268726425903, guid: c6b0bbae05ec6584681fdd7270c5a05a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6397584268726425903, guid: c6b0bbae05ec6584681fdd7270c5a05a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7456792035408503329, guid: c6b0bbae05ec6584681fdd7270c5a05a, type: 3}
       propertyPath: m_Name
       value: Train
@@ -589,10 +679,18 @@ PrefabInstance:
       propertyPath: m_Target
       value: 
       objectReference: {fileID: 4944238974400703216}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 615694541829285574, guid: c6b0bbae05ec6584681fdd7270c5a05a, type: 3}
+    - {fileID: 3451848366291585259, guid: c6b0bbae05ec6584681fdd7270c5a05a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6017680274083578773, guid: c6b0bbae05ec6584681fdd7270c5a05a, type: 3}
+      insertIndex: 3
+      addedObject: {fileID: 329387073}
+    - targetCorrespondingSourceObject: {fileID: 6355629255666365591, guid: c6b0bbae05ec6584681fdd7270c5a05a, type: 3}
+      insertIndex: 3
+      addedObject: {fileID: 1073161452}
   m_SourcePrefab: {fileID: 100100000, guid: c6b0bbae05ec6584681fdd7270c5a05a, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
