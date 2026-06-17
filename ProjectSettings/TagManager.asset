@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Train
   - TrainStopper
+  - Junction
   layers:
   - Default
   - TransparentFX
