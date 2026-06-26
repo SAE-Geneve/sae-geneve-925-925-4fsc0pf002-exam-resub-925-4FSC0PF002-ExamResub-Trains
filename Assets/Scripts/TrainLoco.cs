@@ -4,34 +4,40 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Splines;
 
-[ExecuteInEditMode]
 public class TrainLoco : MonoBehaviour
 {
-
-    private SplineAnimate _splineAnim;
+    private SplineAnimate _locoSpline;
     private SplineContainer _nextTrack;
-    
-    public SplineContainer NextTrack => _nextTrack;
-    public SplineAnimate SplineAnim => _splineAnim;
+
+    [SerializeField] private List<TrainCart> _carts;
+    [SerializeField] private float _cart_length;
 
     //private void OnValidate() => SetCars();
 
     void OnEnable()
     {
-        _splineAnim = GetComponent<SplineAnimate>();
-        _splineAnim.Completed += OnCompletedTrack; 
-    }
-    private void OnDisable()
-    {
-        _splineAnim.Completed -= OnCompletedTrack;
+        _locoSpline = GetComponent<SplineAnimate>();
+        _locoSpline.Completed += OnCompletedTrack;
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private void OnDisable()
+    {
+        _locoSpline.Completed -= OnCompletedTrack;
+    }
+
+    private void Update()
+    {
+        foreach (TrainCart cart in _carts)
+        {
+            UpdateCart(cart);
+        }
+    }
+
     void OnTriggerStay(Collider other)
     {
         if (other.TryGetComponent(out Junction passage))
         {
-            if(passage.NextTrack)
+            if (passage.NextTrack)
             {
                 _nextTrack = passage.NextTrack;
             }
@@ -49,22 +55,35 @@ public class TrainLoco : MonoBehaviour
 
     private void Ride()
     {
-        _splineAnim.Pause();
+        _locoSpline.Pause();
     }
 
     private void Brake()
     {
-        _splineAnim.Play();
+        _locoSpline.Play();
     }
 
     private void OnCompletedTrack()
     {
-        if(_nextTrack) _splineAnim.Container = _nextTrack;
-        
-        Debug.Log($"Loco Completed Track : {_splineAnim.gameObject.name} , Next Track : {_splineAnim.Container}");
-        _splineAnim.NormalizedTime = 0f;
-        _splineAnim.Play();
+        // Set the track for every carts
+        foreach (TrainCart cart in _carts)
+        {
+            if (cart.isActiveAndEnabled) cart.SetNextTrack(_nextTrack);
+        }
+
+        Debug.Log($"Loco Completed Track : {_locoSpline.gameObject.name} , Next Track : {_locoSpline.Container}");
+        if (_nextTrack) _locoSpline.Container = _nextTrack;
+        _locoSpline.StartOffset = 0;
+        _locoSpline.NormalizedTime = 0f;
+        _locoSpline.Play();
     }
 
-
+    private void UpdateCart(TrainCart cart)
+    {
+        if (!cart.isActiveAndEnabled) return;
+        if (_locoSpline.Container == cart.Container)
+        {
+            cart.NormalizedTime = Mathf.Clamp01(_locoSpline.NormalizedTime - cart.MaxSpeed * (_cart_length / cart.Container.CalculateLength()));
+        }
+    }
 }

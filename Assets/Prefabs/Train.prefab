@@ -44,7 +44,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: bbb01fdce620f4645ae0e43ef6c16ff9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -4.2848983
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bbb01fdce620f4645ae0e43ef6c16ff9, type: 3}
       propertyPath: m_LocalPosition.y
@@ -52,11 +52,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bbb01fdce620f4645ae0e43ef6c16ff9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.036387682
+      value: 11.076408
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bbb01fdce620f4645ae0e43ef6c16ff9, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.20402408
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bbb01fdce620f4645ae0e43ef6c16ff9, type: 3}
       propertyPath: m_LocalRotation.x
@@ -64,7 +64,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bbb01fdce620f4645ae0e43ef6c16ff9, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.9789659
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bbb01fdce620f4645ae0e43ef6c16ff9, type: 3}
       propertyPath: m_LocalRotation.z
@@ -129,11 +129,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d0b03e0cab59044991200a0aa9fe09c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrainMaster
-  _cars:
-  - {fileID: 3451848366291585259}
-  - {fileID: 615694541829285574}
-  _carSize: 2.7
-  _splineAnim: {fileID: 8309263701742115889}
+  _carts:
+  - {fileID: 2315281199193677989}
+  - {fileID: 4216113033431067603}
+  _cart_length: 0.3
 --- !u!114 &8309263701742115889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,7 +149,7 @@ MonoBehaviour:
   m_PlayOnAwake: 1
   m_LoopMode: 0
   m_Method: 1
-  m_Duration: 6.7699785
+  m_Duration: 1.3071554
   m_MaxSpeed: 10
   m_EasingMode: 0
   m_AlignmentMode: 1
@@ -215,7 +214,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: e6d9faa292fdf69438053532e7e90791, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -4.2848983
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e6d9faa292fdf69438053532e7e90791, type: 3}
       propertyPath: m_LocalPosition.y
@@ -223,11 +222,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e6d9faa292fdf69438053532e7e90791, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 11.076408
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e6d9faa292fdf69438053532e7e90791, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.20402408
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e6d9faa292fdf69438053532e7e90791, type: 3}
       propertyPath: m_LocalRotation.x
@@ -235,7 +234,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e6d9faa292fdf69438053532e7e90791, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.9789659
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e6d9faa292fdf69438053532e7e90791, type: 3}
       propertyPath: m_LocalRotation.z
@@ -259,7 +258,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e6d9faa292fdf69438053532e7e90791, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -267,7 +266,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e6d9faa292fdf69438053532e7e90791, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 615694541829285574}
+      addedObject: {fileID: 4216113033431067603}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e6d9faa292fdf69438053532e7e90791, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1958938226655706791}
@@ -282,7 +281,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e6d9faa292fdf69438053532e7e90791, type: 3}
   m_PrefabInstance: {fileID: 6121186786952595910}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &615694541829285574
+--- !u!114 &4216113033431067603
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -291,12 +290,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6355629255666365591}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3da2ff490b70ece4686a6731aa803a9e, type: 3}
+  m_Script: {fileID: 11500000, guid: f153cb268eb36d245914197dc5ffa168, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TrainSlave
-  _locomotive: {fileID: 8309263701742115889}
-  _carLength: 2.7
-  _carOrder: 2
+  m_EditorClassIdentifier: Assembly-CSharp::TrainCart
+  _nextTrack: {fileID: 0}
 --- !u!114 &1958938226655706791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -313,13 +310,13 @@ MonoBehaviour:
   m_PlayOnAwake: 1
   m_LoopMode: 0
   m_Method: 1
-  m_Duration: 6.7699785
+  m_Duration: 1.3114516
   m_MaxSpeed: 10
   m_EasingMode: 0
   m_AlignmentMode: 1
   m_ObjectForwardAxis: 2
   m_ObjectUpAxis: 1
-  m_StartOffset: 1
+  m_StartOffset: 0
 --- !u!1001 &6864173586847743684
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -330,7 +327,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: e6d9faa292fdf69438053532e7e90791, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -4.2848983
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e6d9faa292fdf69438053532e7e90791, type: 3}
       propertyPath: m_LocalPosition.y
@@ -338,11 +335,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e6d9faa292fdf69438053532e7e90791, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 11.076408
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e6d9faa292fdf69438053532e7e90791, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.20402408
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e6d9faa292fdf69438053532e7e90791, type: 3}
       propertyPath: m_LocalRotation.x
@@ -350,7 +347,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e6d9faa292fdf69438053532e7e90791, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.9789659
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e6d9faa292fdf69438053532e7e90791, type: 3}
       propertyPath: m_LocalRotation.z
@@ -382,7 +379,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e6d9faa292fdf69438053532e7e90791, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 3451848366291585259}
+      addedObject: {fileID: 2315281199193677989}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e6d9faa292fdf69438053532e7e90791, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1075333139919201711}
@@ -392,7 +389,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e6d9faa292fdf69438053532e7e90791, type: 3}
   m_PrefabInstance: {fileID: 6864173586847743684}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &3451848366291585259
+--- !u!114 &2315281199193677989
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -401,12 +398,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6017680274083578773}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3da2ff490b70ece4686a6731aa803a9e, type: 3}
+  m_Script: {fileID: 11500000, guid: f153cb268eb36d245914197dc5ffa168, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TrainSlave
-  _locomotive: {fileID: 8309263701742115889}
-  _carLength: 2.7
-  _carOrder: 1
+  m_EditorClassIdentifier: Assembly-CSharp::TrainCart
+  _nextTrack: {fileID: 0}
 --- !u!114 &1075333139919201711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -420,16 +415,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.Splines::UnityEngine.Splines.SplineAnimate
   m_Target: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_LoopMode: 0
   m_Method: 1
-  m_Duration: 6.7699785
+  m_Duration: 1.3071554
   m_MaxSpeed: 10
   m_EasingMode: 0
   m_AlignmentMode: 1
   m_ObjectForwardAxis: 2
   m_ObjectUpAxis: 1
-  m_StartOffset: 1
+  m_StartOffset: 0
 --- !u!4 &6397584268726425903 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e6d9faa292fdf69438053532e7e90791, type: 3}

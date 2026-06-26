@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 5410651237668111986}
   - component: {fileID: 223563865224422216}
   m_Layer: 0
-  m_Name: Spline
+  m_Name: SplineA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -96,7 +96,7 @@ MonoBehaviour:
     - Position:
         x: 0
         y: 0
-        z: -0.036387682
+        z: 0
       TangentIn:
         x: 0
         y: 0
@@ -148,113 +148,23 @@ MonoBehaviour:
           z: 0
           w: 0.70710677
     - Position:
-        x: 9
-        y: 0
+        x: 7.8531113
+        y: -0.00000047683716
         z: 12
       TangentIn:
-        x: 0
+        x: 0.00000011920929
         y: 0
-        z: 0
+        z: -0.8469378
       TangentOut:
-        x: 2.3545307e-14
+        x: -0.000000059604645
         y: 0
-        z: 3.3137074
+        z: 0.61549383
       Rotation:
         value:
-          x: 0
+          x: -0
           y: 0.70710677
-          z: 0
+          z: -0
           w: 0.70710677
-    - Position:
-        x: 14.999998
-        y: 0
-        z: 6
-      TangentIn:
-        x: 0
-        y: 0
-        z: -3.3137083
-      TangentOut:
-        x: 0
-        y: 0
-        z: -0
-      Rotation:
-        value:
-          x: 0
-          y: 0.99999994
-          z: 0
-          w: 0
-    - Position:
-        x: 15
-        y: 0
-        z: -6.000001
-      TangentIn:
-        x: 0
-        y: 0
-        z: 0
-      TangentOut:
-        x: 7.419995e-15
-        y: 0
-        z: 3.3137083
-      Rotation:
-        value:
-          x: 0
-          y: 1
-          z: 0
-          w: -0.00000004371139
-    - Position:
-        x: 9
-        y: 0
-        z: -12
-      TangentIn:
-        x: 1.5102465e-13
-        y: 0
-        z: -3.3137074
-      TangentOut:
-        x: 0
-        y: 0
-        z: 0
-      Rotation:
-        value:
-          x: 0
-          y: 0.7071067
-          z: 0
-          w: -0.7071068
-    - Position:
-        x: 5.9999995
-        y: 0
-        z: -11.999998
-      TangentIn:
-        x: 0
-        y: 0
-        z: 0
-      TangentOut:
-        x: -2.3545307e-14
-        y: 0
-        z: 3.3137074
-      Rotation:
-        value:
-          x: 0
-          y: 0.70710677
-          z: 0
-          w: -0.70710677
-    - Position:
-        x: 0
-        y: 0
-        z: -5.999999
-      TangentIn:
-        x: 0
-        y: 0
-        z: -3.3137083
-      TangentOut:
-        x: 0
-        y: 0
-        z: 0
-      Rotation:
-        value:
-          x: 0
-          y: 0
-          z: 0
-          w: -0.99999994
     m_MetaData:
     - Mode: 4
       Tension: 0.5
@@ -264,17 +174,7 @@ MonoBehaviour:
       Tension: 0.5
     - Mode: 4
       Tension: 0.5
-    - Mode: 4
-      Tension: 0.5
-    - Mode: 4
-      Tension: 0.5
-    - Mode: 4
-      Tension: 0.5
-    - Mode: 4
-      Tension: 0.5
-    - Mode: 4
-      Tension: 0.5
-    m_Closed: 1
+    m_Closed: 0
     m_IntData:
       m_Data: []
     m_FloatData:
@@ -296,8 +196,7 @@ GameObject:
   - component: {fileID: 6751225412985260437}
   - component: {fileID: 3577866204516615812}
   - component: {fileID: 1922676555116856770}
-  - component: {fileID: 6164040124453855046}
-  - component: {fileID: 4635124512606949554}
+  - component: {fileID: 3405213831449821302}
   m_Layer: 0
   m_Name: Circuit
   m_TagString: Untagged
@@ -377,7 +276,7 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &6164040124453855046
+--- !u!114 &3405213831449821302
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -392,57 +291,7 @@ MonoBehaviour:
   m_Container: {fileID: 223563865224422216}
   m_ItemsToInstantiate:
   - prefab: {fileID: 0}
-    Prefab: {fileID: 919132149155446097, guid: a45d1707f45b52c44baf0c0dfbaa2994, type: 3}
-    probability: 0
-    Probability: 100
-  m_Method: 1
-  m_Space: 0
-  m_Spacing: {x: 1, y: 1}
-  m_Up: 1
-  m_Forward: 2
-  m_PositionOffset:
-    setup: 0
-    min: {x: 0, y: 0, z: 0}
-    max: {x: 0, y: 0, z: 0}
-    randomX: 0
-    randomY: 0
-    randomZ: 0
-    space: 0
-  m_RotationOffset:
-    setup: 0
-    min: {x: 0, y: 0, z: 0}
-    max: {x: 0, y: 0, z: 0}
-    randomX: 0
-    randomY: 0
-    randomZ: 0
-    space: 0
-  m_ScaleOffset:
-    setup: 0
-    min: {x: 0, y: 0, z: 0}
-    max: {x: 0, y: 0, z: 0}
-    randomX: 0
-    randomY: 0
-    randomZ: 0
-    space: 0
-  m_DeprecatedInstances: []
-  m_AutoRefresh: 1
-  m_Seed: -808451954
---- !u!114 &4635124512606949554
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3001770933517960215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b74686beb0670a4ea61325c0acf4411, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.Splines::UnityEngine.Splines.SplineInstantiate
-  m_Container: {fileID: 223563865224422216}
-  m_ItemsToInstantiate:
-  - prefab: {fileID: 0}
-    Prefab: {fileID: 919132149155446097, guid: cbe60e928a85d5e4ca5a0bfab0a455d3, type: 3}
+    Prefab: {fileID: 919132149155446097, guid: dafb58108af92fb499949b5a9dd2c51d, type: 3}
     probability: 0
     Probability: 0
   m_Method: 1
@@ -476,4 +325,4 @@ MonoBehaviour:
     space: 0
   m_DeprecatedInstances: []
   m_AutoRefresh: 1
-  m_Seed: -319228897
+  m_Seed: 1517654707

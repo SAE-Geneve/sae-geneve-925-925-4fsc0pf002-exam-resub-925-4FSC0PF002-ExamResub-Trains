@@ -1,49 +1,59 @@
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.Splines;
 
 public class TrainCart : MonoBehaviour
 {
-    
     private SplineAnimate _splineAnim;
-    private SplineContainer _nextTrack;
-    
-    public SplineContainer NextTrack => _nextTrack;
-    public SplineAnimate SplineAnim => _splineAnim;
+    public SplineContainer _nextTrack;
+
+    public float NormalizedTime
+    {
+        get
+        {
+            if (_splineAnim)
+                return _splineAnim.NormalizedTime;
+            return 0f;
+        }
+        set
+        {
+            if (_splineAnim)
+                _splineAnim.NormalizedTime = value;
+        }
+    }
+    public float MaxSpeed => _splineAnim ? _splineAnim.MaxSpeed : 0f;
+    public SplineContainer Container => _splineAnim ?  _splineAnim.Container : null;
+    public void Play() => _splineAnim.Play();
+
 
     void OnEnable()
     {
         _splineAnim = GetComponent<SplineAnimate>();
-        _splineAnim.Completed += OnCompletedTrack; 
+        _splineAnim.Play();
+        _splineAnim.Completed += OnCompletedTrack;
     }
+
     private void OnDisable()
     {
         _splineAnim.Completed -= OnCompletedTrack;
     }
-    
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void OnTriggerStay(Collider other)
+
+    // Update is called once per frame
+
+    public void SetNextTrack(SplineContainer nextTrack)
     {
-        if (other.TryGetComponent(out Junction passage))
-        {
-            if(passage.NextTrack)
-            {
-                _nextTrack = passage.NextTrack;
-            }
-        }
+        _nextTrack = nextTrack;
     }
 
     private void OnCompletedTrack()
     {
-        if(_nextTrack) _splineAnim.Container = _nextTrack;
-        
-        Debug.Log($"Loco Completed Track : {_splineAnim.gameObject.name} , Next Track : {_splineAnim.Container}");
+        if (_nextTrack)
+        {
+            _splineAnim.Container = _nextTrack;
+        }
+
         _splineAnim.NormalizedTime = 0f;
         _splineAnim.Play();
-    }
-    
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
