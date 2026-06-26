@@ -27,9 +27,9 @@ public class TrainLoco : MonoBehaviour
 
     private void Update()
     {
-        foreach (TrainCart cart in _carts)
+        for (int idxCart = 0; idxCart < _carts.Count; idxCart++)
         {
-            UpdateCart(cart);
+            UpdateCart(_carts[idxCart], idxCart);
         }
     }
 
@@ -78,12 +78,12 @@ public class TrainLoco : MonoBehaviour
         _locoSpline.Play();
     }
 
-    private void UpdateCart(TrainCart cart)
+    private void UpdateCart(TrainCart cart, int idx)
     {
         if (!cart.isActiveAndEnabled) return;
         if (_locoSpline.Container == cart.Container)
         {
-            cart.NormalizedTime = Mathf.Clamp01(_locoSpline.NormalizedTime - cart.MaxSpeed * (_cart_length / cart.Container.CalculateLength()));
+            cart.NormalizedTime = Mathf.Clamp01(_locoSpline.NormalizedTime - (idx + 1) * cart.MaxSpeed * (_cart_length / cart.Container.CalculateLength()));
         }
     }
 }
